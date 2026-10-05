@@ -27,7 +27,7 @@ func Generate(n int) <-chan int {
 	go func() {
 		defer close(out)
 		for i := 0; i < n; i++ {
-			out <- rand.Intn(101)
+			out <- rand.Intn(100) + 1
 		}
 	}()
 
